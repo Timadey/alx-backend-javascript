@@ -1,16 +1,18 @@
-export default function createIteratorObject (report) {
-  return employeeIterator(report);
-};
-
-function * employees (dept) {
+function* employees(dept) {
   for (const employee of dept) {
     yield employee;
   }
 }
 
-function * employeeIterator (report) {
-  const allEmployees = report.allEmployees;
+function* employeeIterator(report) {
+  const { allEmployees } = report;
   for (const department in allEmployees) {
-    yield* employees(allEmployees[`${department}`]);
+    if (Object.hasOwn(allEmployees, department)) {
+      yield* employees(allEmployees[`${department}`]);
+    }
   }
+}
+
+export default function createIteratorObject(report) {
+  return employeeIterator(report);
 }
