@@ -1,0 +1,5 @@
+
+> dev
+> npx babel-node "main.js"
+
+Bob | Jane | Sylvie
