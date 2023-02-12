@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
 function getResponseFromAPI() {
-    return new Promise();
+  return new Promise();
 }
+/* eslint-enable no-unused-vars */
