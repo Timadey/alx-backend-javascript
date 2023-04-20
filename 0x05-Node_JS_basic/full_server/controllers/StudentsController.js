@@ -1,7 +1,6 @@
 import readDatabase from '../utils';
 
 class StudentsController {
-
   static getAllStudents(req, res) {
     const output = [];
     res.status(200);
